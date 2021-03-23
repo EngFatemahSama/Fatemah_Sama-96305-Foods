@@ -11,6 +11,7 @@ const Stack = createStackNavigator()
 const Top = createBottumTobNavigator()
 
 import Home from './Screens/Home';
+import Detail from './Screens/Detail';
 
 export default function App() {
   return (
@@ -55,6 +56,12 @@ function HomeStack(){
     component= {Home}
     options={{title:"Home Page"}}
     />
+
+    <Stack.Screen
+    name="Detail"
+    component={Detail}
+    />
+    
   </Stack.Navigator>
   );
 }
