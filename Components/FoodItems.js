@@ -1,41 +1,34 @@
+
 import React from 'react';
-import { StyleSheet, Text, View , Image, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View ,Image} from 'react-native';
 
-import {useNavigation} from '@react-navigation/native'
-
-
-export default function FoodItems({image, name, price, detail}) {
-   const navigation= useNavigation()
-
+export default function FoodItems({name,price,image}) {
+   
   return (
-     <TouchableOpacity  style= {styles.container}
-       onPress={() => navigation.navigate("Detail", {image, name, price, detail})}
-       >
-    
     <View style={styles.container}>
-        <Image 
-            style={styles.image}
-            source={{uri: image}}
-        />
-        <View style={{alignItems: "center"}}>
-            <Text style={{fontWeight: "bold"}}>{name}</Text>
-            <Text>{price}</Text>
-        </View>
+       <Image
+        style={styles.image}
+         source={{uri: image}}
+       />
+       <View style={{alignItems:'center'}}>
+          <Text style={{fontWeight:'bold'}}>{name}</Text>
+          <Text >{price}</Text>
+       </View>
     </View>
-    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginLeft: 10,
-    marginBottom: 10
+  container:{
+    flex:1,
+    marginLeft:10,
+    marginBottom:10
   },
-  image: {
+  image:{
     height:100,
     width:100,
-    borderTopLeftRadius: 15,
-    borderBottomEndRadius: 15
+    borderTopLeftRadius:15,
+    borderBottomRightRadius:15
   }
+    
 });
