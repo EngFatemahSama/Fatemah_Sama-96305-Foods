@@ -69,6 +69,7 @@ function HomeStack() {
           name="Home"
           component={Home}
           options={{title: "Home Page"}}
+          
         /> 
          <Stack.Screen 
           name="Details"
